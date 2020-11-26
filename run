@@ -3,10 +3,10 @@
 
 #      ▇▇▇                                       ▇▇▇               ▄▇▇▇▇▇▄                 ▇▇                                    ▇▇                
 #      ▇▇        ▇                        ▇       ▇▇             ▄▇                ▇▄                        ▇▇                  ▇▇
-#      ▇▇          ▇ @Hskh56   ▇         ▇▇            ▄▇▄▄▄▄▄▇▄                               ▇▇ ▇▇
-#      ▇▇             ▇             ▇             ▇▇        ▄▇                            ▇▄                          ▇▇ ▇▇ ¦ Dev : @Hskh56
-#      ▇▇                ▇       ▇                ▇▇      ▄▇ ¦ Dev : @Hskh56  ▇▄                 ▇▇                 ▇▇
-#      ▇▇                   ▇▇                    ▇▇     ▄▇                                    ▇▄      ▇▇                                  ▇▇¦ Source MAX BY @Hskh56
+#      ▇▇          ▇ @a_m_y_r_1_1   ▇         ▇▇            ▄▇▄▄▄▄▄▇▄                               ▇▇ ▇▇
+#      ▇▇             ▇             ▇             ▇▇        ▄▇                            ▇▄                          ▇▇ ▇▇ ¦ Dev : @a_m_y_r_1_1
+#      ▇▇                ▇       ▇                ▇▇      ▄▇ ¦ Dev : @amyr124  ▇▄                 ▇▇                 ▇▇
+#      ▇▇                   ▇▇                    ▇▇     ▄▇                                    ▇▄      ▇▇                                  ▇▇¦ Source syria BY @amyr124
 #---------------------------------------------------------------------
 cd $(cd $(dirname $0); pwd)
  
@@ -24,14 +24,14 @@ if [ "$Version" == "18" ];then
 echo -e "${GREEN}
 ▇▇▇                                       ▇▇▇               ▄▇▇▇▇▇▄                 ▇▇                                    ▇▇                
 ▇▇        ▇                        ▇       ▇▇             ▄▇                ▇▄                        ▇▇                  ▇▇
-▇▇          ▇ @Hskh56   ▇         ▇▇            ▄▇▄▄▄▄▄▇▄                               ▇▇ ▇▇
-▇▇             ▇             ▇             ▇▇        ▄▇                            ▇▄                          ▇▇ ▇▇ ¦ Dev : @Hskh56
-▇▇                ▇       ▇                ▇▇      ▄▇ ¦ Dev : @Hskh56  ▇▄                 ▇▇                 ▇▇
-▇▇                   ▇▇                    ▇▇     ▄▇                                    ▇▄      ▇▇                                  ▇▇¦ Source MAX BY @Hskh56
+▇▇          ▇ @a_m_y_r_1_1   ▇         ▇▇            ▄▇▄▄▄▄▄▇▄                               ▇▇ ▇▇
+▇▇             ▇             ▇             ▇▇        ▄▇                            ▇▄                          ▇▇ ▇▇ ¦ Dev : @amyr124
+▇▇                ▇       ▇                ▇▇      ▄▇ ¦ Dev : @a_m_y_r_1_1  ▇▄                 ▇▇                 ▇▇
+▇▇                   ▇▇                    ▇▇     ▄▇                                    ▇▄      ▇▇                                  ▇▇¦ Source syria BY @a_m_y_r_1_1
 ----------------------------------------------------------------------${CNIL}"
 echo -e "${RED}| للاسف لايمكنك تنصيب السورس ع نظام اوبنتو {${Version}} يجب ان يكون على اصدار  اقل مثلا  ${SMAY}14 او 16
 ${CNIL}";
-echo -e "${RED}| Sorry Canot install Source on Ubuntu {${Version}} Please install system To Ubuntu ${SMAY}14 or 16 ${RED} For Run The Source MAX 
+echo -e "${RED}| Sorry Canot install Source on Ubuntu {${Version}} Please install system To Ubuntu ${SMAY}14 or 16 ${RED} For Run The Source syria 
 ${CNIL}";
 exit;
 fi
@@ -41,7 +41,7 @@ if [ ! -f "./TG" ]; then
 echo -e "${RED}
 ¦
 ¦ CAUTION:${WHITB} Your Not Dwonload TG .
-¦ NOW I Run File ${Yellow}./run${WHITB} To install ${SMAY}Source MAX${CNIL} . \n
+¦ NOW I Run File ${Yellow}./run${WHITB} To install ${SMAY}Source syria${CNIL} . \n
 \n\n"
 chmod +x ./ins
 ./ins
@@ -70,10 +70,10 @@ sudo rm -fr ../.telegram-cli
 done
 else
 
-if ! screen -list | grep -q "max"; then
-screen -S max ./run R
+if ! screen -list | grep -q "syria"; then
+screen -S syria ./run R
 fi
-screen -S max -X kill
-screen -S max ./run R
+screen -S syria -X kill
+screen -S syria ./run R
 fi
 

@@ -13,13 +13,13 @@
 local function Zhrfa(msg,MsgText)
 if msg.type ~= "pv" then
 if MsgText[1] == "زخرفه" then
-redis:setex(max..":ZhrfNow:"..msg.sender_user_id_,500,true)
+redis:setex(syria..":ZhrfNow:"..msg.sender_user_id_,500,true)
 sendMsg(msg.chat_id_,msg.id_,"📑| حسننا , الان يمكنك ارسال الاسم 💯")    
 return false
 end
 
-if redis:get(max..":ZhrfNow:"..msg.sender_user_id_) then
-redis:del(max..":ZhrfNow:"..msg.sender_user_id_)
+if redis:get(syria..":ZhrfNow:"..msg.sender_user_id_) then
+redis:del(syria..":ZhrfNow:"..msg.sender_user_id_)
 if utf8.len(msg.text) > 300 then
 sendMsg(msg.chat_id_,msg.id_,"📛| لا يمكنك زخرفه اكثر من 20 حرف \n📑| ارسل امر زخرفه وحاول مجددا بحروف اقل")    
 return false
@@ -907,9 +907,9 @@ end
 end
 local function TextRes(msg)
 
-if msg.text and msg.type ~= "pv" and redis:get(max..":ZhrfNow:"..msg.sender_user_id_) then
+if msg.text and msg.type ~= "pv" and redis:get(syria..":ZhrfNow:"..msg.sender_user_id_) then
 Text = msg.text
-redis:del(max..":ZhrfNow:"..msg.sender_user_id_)
+redis:del(syria..":ZhrfNow:"..msg.sender_user_id_)
 if utf8.len(msg.text) > 300 then
 sendMsg(msg.chat_id_,msg.id_,"📛| لا يمكنك زخرفه اكثر من 300 حرف \n📑| ارسل امر زخرفه وحاول مجددا بحروف اقل")    
 return false
@@ -1795,11 +1795,11 @@ end
 end
 
 return {
-max = {
+syria = {
 "^(زخرفه)$"
  },
- imax = Zhrfa,
- dmax = TextRes,
+ isyria = Zhrfa,
+ dsyria = TextRes,
  }
  
  
@@ -1808,10 +1808,10 @@ max = {
 ─▄█▀█▄──▄███▄─
 ▐█░██████████▌
 ─██▒█████████─
-──▀████████▀──┊@uop90
+──▀████████▀──┊@a_m_y_r_1_1
 ─────▀██▀─────
-┊ＭᎯẊ ‿ @uop90
-تم تطوير وبرمجة السورس من قبل مطورين ماكس ┊
-┊@uop70 ‿ @uop70 
+┊ＭᎯẊ ‿ @amyr124
+تم تطوير وبرمجة السورس من قبل مطورين 
+┊@@amyr124 
 #-------------------------------------------------------------------
 ]]
